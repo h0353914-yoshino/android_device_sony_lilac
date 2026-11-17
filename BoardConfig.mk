@@ -1,0 +1,11 @@
+DEVICE_PATH := device/sony/lilac
+COMMON_PATH := device/sony/yoshino-common
+include $(COMMON_PATH)/BoardConfigOrangeFox.mk
+
+TARGET_KERNEL_CONFIG += sony/lilac.config
+TARGET_BOOTLOADER_BOARD_NAME := G8441
+TARGET_SCREEN_DENSITY := 320
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
+TARGET_OTA_ASSERT_DEVICE := lilac,G8441,SO-02K
+FOX_VARIANT := XZ1C
+FOX_TARGET_DEVICES := lilac,G8441,SO-02K
